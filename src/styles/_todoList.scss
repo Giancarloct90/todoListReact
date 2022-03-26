@@ -1,0 +1,85 @@
+.divTodoList {
+  background: #74ebd5; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #acb6e5,
+    #74ebd5
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #acb6e5,
+    #74ebd5
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  padding: 0rem 5rem;
+  padding-top: 15rem;
+
+  .divContentTodoList {
+    background-color: bisque;
+    min-height: 45rem;
+    min-width: 25%;
+    padding: 3rem;
+    border-radius: 1rem;
+    // display: grid;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    opacity: 0;
+    transform: translateY(100%);
+    animation: taskDiv 1s forwards ease-in-out 0.7s;
+  }
+
+  .txtTask,
+  .btnAddTask {
+    font-size: 1.3rem;
+    height: 3.4rem;
+    font-family: "poppins";
+  }
+
+  .txtTask {
+    width: 70%;
+    padding: 0.1rem 1rem;
+    border: none;
+    outline: none;
+
+    &:focus {
+      border: 0.2rem solid #74ebd5;
+      outline: none;
+
+      // height: 3.01rem;
+    }
+  }
+  .btnAddTask {
+    font-size: 1.3rem;
+
+    width: 30%;
+    border: none;
+    background-color: lightcoral;
+    color: white;
+    cursor: pointer;
+  }
+
+  .Tasks {
+    display: grid;
+    gap: 1rem;
+  }
+  .todoTitle {
+    font-size: 5rem;
+    font-family: "poppins";
+    transform: translateX(-100%);
+    opacity: 0;
+    animation: titleMove 1s forwards ease-in-out 0.7s;
+  }
+}
+
+// .taskCompleted {
+//   background-color: rgb(221, 220, 220);
+// }
+
+// .yay {
+//   background-color: rgb(221, 220, 220);
+// }

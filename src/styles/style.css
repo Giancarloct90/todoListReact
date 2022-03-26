@@ -1,0 +1,150 @@
+@font-face {
+  font-family: "poppins";
+  src: url("../assets/fonts/Poppins-Medium.ttf");
+}
+*,
+html {
+  margin: 0rem;
+  padding: 0rem;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  animation: load 1s normal ease-in-out;
+}
+
+.divTodoList {
+  background: #74ebd5;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #acb6e5, #74ebd5);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #acb6e5, #74ebd5);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  padding: 0rem 5rem;
+  padding-top: 15rem;
+}
+.divTodoList .divContentTodoList {
+  background-color: bisque;
+  min-height: 45rem;
+  min-width: 25%;
+  padding: 3rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  opacity: 0;
+  transform: translateY(100%);
+  animation: taskDiv 1s forwards ease-in-out 0.7s;
+}
+.divTodoList .txtTask,
+.divTodoList .btnAddTask {
+  font-size: 1.3rem;
+  height: 3.4rem;
+  font-family: "poppins";
+}
+.divTodoList .txtTask {
+  width: 70%;
+  padding: 0.1rem 1rem;
+  border: none;
+  outline: none;
+}
+.divTodoList .txtTask:focus {
+  border: 0.2rem solid #74ebd5;
+  outline: none;
+}
+.divTodoList .btnAddTask {
+  font-size: 1.3rem;
+  width: 30%;
+  border: none;
+  background-color: lightcoral;
+  color: white;
+  cursor: pointer;
+}
+.divTodoList .Tasks {
+  display: grid;
+  gap: 1rem;
+}
+.divTodoList .todoTitle {
+  font-size: 5rem;
+  font-family: "poppins";
+  transform: translateX(-100%);
+  opacity: 0;
+  animation: titleMove 1s forwards ease-in-out 0.7s;
+}
+
+.task {
+  background-color: white;
+  border-radius: 1rem;
+  height: auto;
+  width: 100%;
+  padding: 0.7rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  animation: load 0.5s normal ease-in-out;
+  cursor: pointer;
+}
+.task .hTask {
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  letter-spacing: 0.2rem;
+}
+.task .btnDelete {
+  border: none;
+  background-color: red;
+  height: auto;
+  color: white;
+  font-family: "poppins";
+  font-size: 1.3rem;
+  font-weight: 900;
+  border-radius: 0.7rem;
+  width: 3rem;
+  cursor: pointer;
+}
+
+.taskCompleted {
+  background-color: #dddcdc;
+  animation: load 0.5s normal ease-in-out;
+}
+
+.tskCom {
+  text-decoration-line: line-through;
+  animation: load 0.5s normal ease-in-out;
+}
+
+@keyframes load {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes titleMove {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@keyframes taskDiv {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

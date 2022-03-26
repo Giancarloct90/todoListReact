@@ -1,0 +1,40 @@
+// FONTS
+@font-face {
+  font-family: "poppins";
+  src: url("../assets/fonts/Poppins-Medium.ttf");
+}
+
+// IMPORT PARTIALS
+@import "globals";
+@import "todoList";
+@import "detailsTask";
+
+@keyframes load {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes titleMove {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@keyframes taskDiv {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
